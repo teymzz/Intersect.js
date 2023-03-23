@@ -75,7 +75,7 @@ The ```status``` method provides an additional key ```onScroll``` which determin
    + ```id``` the id of the target entry element if defined
    + ```scrollPoint``` current window's scroll point
    + ```inview``` same as _isIntersecting_
-   + ```element_ returns a data for the current object with the keys below
+   + ```element``` returns a data for the current object with the keys below
        + ```id``` the id of the target entry element if defined
        + ```fromWindowTop``` current distance of the entry element from the window's top.
        + ```aboveWindowTop``` returns true if the entry element is entirely above the window's top.
