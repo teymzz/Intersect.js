@@ -72,19 +72,19 @@ This method is similar to _observe()_ method but with a slight difference as it 
 The ```status``` method provides an additional key ```onScroll``` which determines if a scroll event is applied or just a normal intersection. The options accepted option is either ```[scroll|intersect]```. The sample code above is handled in a more advanced way as the ```entry``` argument provides us access to more keys which are listed below: 
    
 
-   + _id_ the id of the target entry element if defined
-   + _scrollPoint_ current window's scroll point
-   + _inview_ same as _isIntersecting_
-   + _element_ returns a data for the current object with the keys below
-       + _id_ the id of the target entry element if defined
-       + _fromWindowTop_ current distance of the entry element from the window's top.
-       + _aboveWindowTop_ returns true if the entry element is entirely above the window's top.
-       + _belowWindowTop_ returns true if part of the entry element is below the window's top.
-       + _zeroDownwards_ returns true if the distance of the element from the window's top is 0 or less than.
-       + _zeroUpwards_ returns true if the distance of the element from the window's top is 0 or greater than.
-       + _zeroPoint_ returns true if the distance of the element from the window's top is 0.
+   + ```id``` the id of the target entry element if defined
+   + ```scrollPoint``` current window's scroll point
+   + ```inview``` same as _isIntersecting_
+   + ```element_ returns a data for the current object with the keys below
+       + ```id``` the id of the target entry element if defined
+       + ```fromWindowTop``` current distance of the entry element from the window's top.
+       + ```aboveWindowTop``` returns true if the entry element is entirely above the window's top.
+       + ```belowWindowTop``` returns true if part of the entry element is below the window's top.
+       + ```zeroDownwards``` returns true if the distance of the element from the window's top is 0 or less than.
+       + ```zeroUpwards``` returns true if the distance of the element from the window's top is 0 or greater than.
+       + ```zeroPoint``` returns true if the distance of the element from the window's top is 0.
 
-   > Note that When the _"scroll"_ option is used, the onscroll event is activated for the observer. When onscroll event is turned on, we can get to use the ```observed()``` method which helps to detect if an element has been unobserved. A sample is shown below: 
+   > Note that When the _"scroll"_ option is used, the onscroll event is activated for the observer. When onscroll event is turned on, we can get to use the ```unobserved()``` method which helps to detect if an element has been unobserved. A sample is shown below: 
 
    ```js 
    let intersect = new Intersect;
@@ -111,7 +111,7 @@ The ```status``` method provides an additional key ```onScroll``` which determin
    });
    ```
 
-   > In code above, since the _scroll_ option is supplied, the scroll event will be started. The code checks if the entry is in view then removes it from the scroll list through the _entry.unobserve()_ method. This activity will also save the unobserved entry in a storage list. If the entry is not in view, it will go on to check if the element is not in the list of unobserved entries before printing the displaying the text "not in view" to the console
+   > In code above, since the _scroll_ option is supplied, the scroll event will be started. The code checks if the entry is in view then removes it from the scroll list through the ```entry.unobserve()``` method. This activity will also save the unobserved entry in a storage list. If the entry is not in view, it will go on to check if the element is not in the list of unobserved entries before printing the displaying the text "not in view" to the console
 
 
 
