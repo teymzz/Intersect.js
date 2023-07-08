@@ -1,5 +1,5 @@
 # Intersect.js 
-This is an advanced level plugin that is built upon javascript IntersectionObject and the window scroll event 
+This is an advanced level plugin that is built upon javascript IntersectionObserverAPI and the window's scroll event 
 
 #### Initialization 
 ```js
